@@ -19,8 +19,10 @@ const Navbar = () => {
       {/* 1. 移动端汉堡按钮 - 仅在移动端显示 */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed top-8 right-8 z-[60] md:hidden flex flex-col gap-1.5 p-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20"
+        className="fixed top-8 right-8 z-[60] md:hidden flex flex-col gap-1.5 p-2 
+  mix-blend-difference"
       >
+        <span className="w-6 h-[1px] bg-white"></span>
         <span className="w-6 h-[1px] bg-white"></span>
         <span className="w-6 h-[1px] bg-white"></span>
       </button>
@@ -69,19 +71,40 @@ const Navbar = () => {
 
       {/* 侧滑抽屉内容 */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[70vw] bg-black border-l border-white/10 z-[80] transition-transform duration-500 ease-out md:hidden ${
+        className={`fixed top-0 right-0 h-screen w-[75vw] max-w-[360px] bg-black border-l border-white/10 z-[80] transition-transform duration-500 ease-out md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* 关闭按钮 */}
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-8 right-8 text-white text-3xl font-light"
-        >
-          ✕
-        </button>
+        {/* 顶部区域 */}
+        <div className="relative flex items-center justify-between px-8 pt-10">
+          {/* Logo */}
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            className="relative w-28 h-14"
+          >
+            <Image
+              src="/logo.jpg"
+              alt="Logo"
+              fill
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          </Link>
 
-        <div className="flex flex-col h-full justify-center px-12 space-y-10">
+          {/* 关闭按钮 */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white text-3xl font-light"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* 分割线 */}
+        <div className="border-t border-white/10 mt-8" />
+
+        {/* 菜单内容 */}
+        <div className="flex flex-col justify-center px-10 py-16 space-y-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
