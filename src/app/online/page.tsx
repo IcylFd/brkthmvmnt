@@ -1,7 +1,7 @@
 /*
  * @Date: 2026-02-13 20:22:43
  * @LastEditors: lifangdi
- * @LastEditTime: 2026-02-21 15:11:31
+ * @LastEditTime: 2026-02-21 19:43:30
  */
 "use client"; // 声明这是客户端组件，因为我们要处理鼠标交互和提交
 
@@ -46,19 +46,31 @@ export default function Online() {
     }
 
     // 自动消失
-    setTimeout(() => setToast(null), 3000);
+    setTimeout(() => setToast(null), 5000);
   };
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#111]">
       {toast && (
         <div
-          className={`fixed top-6 right-6 px-6 py-4 rounded-xl shadow-xl text-sm font-medium transition-all duration-500
-      ${
-        toast.type === "success"
-          ? "bg-green-400 text-white"
-          : "bg-red-400 text-white"
-      }`}
+          className={`
+      fixed 
+      top-8 
+      left-1/2 
+      -translate-x-1/2 
+      z-50
+      px-8 py-4
+      rounded-2xl
+      text-sm font-medium
+      shadow-2xl
+      backdrop-blur-md
+      transition-all duration-500 ease-out
+      animate-toastIn
+    `}
+          style={{
+            backgroundColor: toast.type === "success" ? "#8FBC8F" : "#FF4D6D",
+            color: "#fff",
+          }}
         >
           {toast.message}
         </div>

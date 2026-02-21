@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { usePathname } from "next/navigation";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname();
   const navLinks = [
     { name: "Product", href: "/product" },
     { name: "Online", href: "/online" },
@@ -42,18 +42,29 @@ const Navbar = () => {
           />
         </Link>
         <div className="flex flex-col space-y-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="group flex flex-col items-start"
-            >
-              <span className="text-[11px] font-bold tracking-[0.2em] text-gray-400 group-hover:text-white transition-colors uppercase">
-                {link.name}
-              </span>
-              <span className="h-[1px] w-4 bg-white mt-1 transition-all group-hover:w-8"></span>
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="group flex flex-col items-start"
+              >
+                <span
+                  className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-colors
+          ${isActive ? "text-white" : "text-gray-400 group-hover:text-white"}`}
+                >
+                  {link.name}
+                </span>
+
+                <span
+                  className={`h-[1px] mt-1 transition-all
+          ${isActive ? "w-8 bg-white" : "w-4 bg-white group-hover:w-8"}`}
+                ></span>
+              </Link>
+            );
+          })}
         </div>
         <div className="text-[10px] text-gray-500 uppercase">
           © 2026 BREAKTHEMOVEMENT
@@ -107,16 +118,23 @@ const Navbar = () => {
 
         {/* 菜单内容 */}
         <div className="flex flex-col justify-center px-10 py-16 space-y-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-2xl font-black italic tracking-tighter uppercase text-white hover:pl-4 transition-all"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`text-2xl font-black italic tracking-tighter uppercase transition-all
+        ${
+          isActive ? "text-white" : "text-white/60 hover:text-white hover:pl-4"
+        }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>
