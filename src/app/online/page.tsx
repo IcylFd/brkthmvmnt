@@ -1,25 +1,18 @@
 /*
  * @Date: 2026-02-13 20:22:43
  * @LastEditors: lifangdi
- * @LastEditTime: 2026-02-21 20:26:05
+ * @LastEditTime: 2026-02-21 20:27:21
  */
 "use client"; // 声明这是客户端组件，因为我们要处理鼠标交互和提交
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function Online() {
   const [email, setEmail] = useState("");
   const [toast, setToast] = useState<{
     message: string;
     type: "success" | "error";
-  } | null>({
-    message: "Application submitted successfully.",
-    type: "success",
-  });
-  // setToast({
-  //         message: "Application submitted successfully.",
-  //         type: "success",
-  //       });
+  } | null>(null);
   // 处理提交
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
