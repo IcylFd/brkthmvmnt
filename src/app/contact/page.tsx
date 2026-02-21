@@ -1,7 +1,7 @@
 /*
  * @Date: 2026-02-13 20:22:43
  * @LastEditors: lifangdi
- * @LastEditTime: 2026-02-21 15:16:07
+ * @LastEditTime: 2026-02-21 20:36:32
  */
 "use client";
 
@@ -28,22 +28,22 @@ const CONTACT_LINKS = [
 
 export default function ContactPage() {
   return (
-    <main className="relative min-h-screen bg-[#f5f5f5] text-black pt-20 md:pt-32 pb-20 px-6 md:px-20 lg:px-32 relative overflow-hidden">
+    <main className="relative max-h-screen bg-[#f5f5f5] text-black pt-20 md:pt-32 pb-20 px-6 md:px-20 lg:px-32 relative overflow-hidden">
       {/* 装饰性大星星，放在角落作为底纹 */}
       <StarIcon
         className="absolute -bottom-20 -right-20 w-[400px] h-[400px] text-black/[0.03] pointer-events-none"
         strokeWidth={0.5}
-        color="#000"
+        color="#ddd"
       />
       <StarIcon
         className="absolute top-0 -left-50 w-[400px] h-[400px] text-black/[0.03] pointer-events-none"
         strokeWidth={0.5}
-        color="#000"
+        color="#ddd"
       />
 
       <div className="max-w-7xl mx-auto flex flex-col items-center md:items-start">
         {/* 超大标题 */}
-        <h1 className="text-xl md:text-[4rem] font-serif leading-none tracking-tighter mb-12 md:mb-20">
+        <h1 className="text-xl uppercase md:text-[4rem] font-serif leading-none tracking-tighter mb-12 md:mb-20">
           Contact
         </h1>
 
