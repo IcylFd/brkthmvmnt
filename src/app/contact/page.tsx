@@ -1,7 +1,7 @@
 /*
  * @Date: 2026-02-13 20:22:43
  * @LastEditors: lifangdi
- * @LastEditTime: 2026-02-21 20:36:32
+ * @LastEditTime: 2026-02-21 20:41:16
  */
 "use client";
 
@@ -85,7 +85,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* 底部版权或口号 */}
         <div className="mt-40 text-[10px] tracking-[0.6em] uppercase text-gray-400">
           Stay in movement / 2026
         </div>
