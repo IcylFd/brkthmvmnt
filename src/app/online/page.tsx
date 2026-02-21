@@ -1,7 +1,7 @@
 /*
  * @Date: 2026-02-13 20:22:43
  * @LastEditors: lifangdi
- * @LastEditTime: 2026-02-17 15:34:34
+ * @LastEditTime: 2026-02-21 15:11:31
  */
 "use client"; // 声明这是客户端组件，因为我们要处理鼠标交互和提交
 
@@ -9,34 +9,60 @@ import React, { useState } from "react";
 
 export default function Online() {
   const [email, setEmail] = useState("");
-
+  const [toast, setToast] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
   // 处理提交
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log("模拟发送至:", email);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
-    alert(`感谢订阅！确认邮件已发送至: ${email} (模拟)`);
+      if (res.ok) {
+        setToast({
+          message: "Application submitted successfully.",
+          type: "success",
+        });
+        setEmail("");
+      } else {
+        setToast({
+          message: "Something went wrong. Please try again.",
+          type: "error",
+        });
+      }
+    } catch (err) {
+      setToast({
+        message: "Network error. Please try later.",
+        type: "error",
+      });
+    }
 
-    setEmail("");
+    // 自动消失
+    setTimeout(() => setToast(null), 3000);
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-
-  //   const recipient = "your-email@example.com"; // 固定收件人
-  //   const subject = "Fixed Subject Template"; // 固定主题
-  //   const body = "This is a fixed content template."; // 固定内容模板
-
-  //   // 构造 mailto 链接
-  //   const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  //   // 调起系统邮件应用
-  //   window.location.href = mailtoLink;
-  // };
-
   return (
-    <div className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden bg-[#111]">
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#111]">
+      {toast && (
+        <div
+          className={`fixed top-6 right-6 px-6 py-4 rounded-xl shadow-xl text-sm font-medium transition-all duration-500
+      ${
+        toast.type === "success"
+          ? "bg-green-400 text-white"
+          : "bg-red-400 text-white"
+      }`}
+        >
+          {toast.message}
+        </div>
+      )}
       {/* 背景：几何四芒星阵列 */}
       <div className="absolute inset-0 grid grid-cols-6 md:grid-cols-10 gap-4 p-8 opacity-20">
         {[...Array(40)].map((_, i) => (
@@ -62,10 +88,12 @@ export default function Online() {
 
       <div className="relative z-10 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter text-white mb-4">
-          Work with me
+          1:1 Movement Mentorship
         </h1>
-        <p className="text-gray-400 text-xl font-light uppercase leading-relaxed mb-8">
-          Apply for 1:1 coaching
+        <p className="text-gray-400 text-xl font-light uppercase leading-relaxed mb-8 p-8">
+          A long-term supervision system built for structural progression.
+          <br />
+          Personalized to your level, load capacity, and schedule.
         </p>
 
         <form
@@ -87,7 +115,7 @@ export default function Online() {
             type="submit"
             className="px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-all active:scale-95 whitespace-nowrap"
           >
-            SEND NOW
+            APPLY NOW
           </button>
         </form>
       </div>

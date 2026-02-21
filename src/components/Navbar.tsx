@@ -55,7 +55,9 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div className="text-[10px] text-gray-500 uppercase">© 2026 FLOW</div>
+        <div className="text-[10px] text-gray-500 uppercase">
+          © 2026 BREAKTHEMOVEMENT
+        </div>
       </nav>
 
       {/* 3. 移动端抽屉菜单 (Overlay + Drawer) */}

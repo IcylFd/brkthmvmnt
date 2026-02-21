@@ -1,7 +1,7 @@
 /*
  * @Date: 2026-02-13 20:22:43
  * @LastEditors: lifangdi
- * @LastEditTime: 2026-02-17 17:16:33
+ * @LastEditTime: 2026-02-21 15:16:07
  */
 "use client";
 
@@ -11,18 +11,18 @@ import { StarIcon } from "@/components/StarIcon";
 const CONTACT_LINKS = [
   {
     name: "Instagram",
-    handle: "@oguzhan.karademir",
-    url: "https://instagram.com/...",
+    handle: "@breakthemovement",
+    url: "https://www.instagram.com/breakthemovement?igsh=eWgxb2Z1d2N2Y2k1&utm_source=qr",
   },
   {
     name: "Email",
-    handle: "hello@breaktmovement.com",
-    url: "mailto:hello@breaktmovement.com",
+    handle: "brkthmvmnt@gmail.com",
+    url: "mailto:brkthmvmnt@gmail.com",
   },
   {
     name: "YouTube",
-    handle: "Break The Movement",
-    url: "https://youtube.com/...",
+    handle: "@breakthemovement",
+    url: "https://youtube.com/@breakthemovement?si=FZEvH8-EaVXTdeh5",
   },
 ];
 

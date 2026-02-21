@@ -7,6 +7,7 @@ import product1 from "@/assets/product1.jpg";
 import product2 from "@/assets/product2.jpg";
 import product3 from "@/assets/product3.jpg";
 import product4 from "@/assets/product4.jpg";
+import product5 from "@/assets/product5.jpg";
 import Image from "next/image";
 
 const EBOOKS = [
@@ -16,7 +17,7 @@ const EBOOKS = [
     description:
       "A structured training method built for long-term performance.",
     image: product0,
-    link: "https://your-shop-link.com/1",
+    link: "https://www.shopier.com/brkthmvmnt/44380603",
   },
   {
     id: 2,
@@ -24,7 +25,7 @@ const EBOOKS = [
     description:
       "A 3-week structured recovery system designed to restore mobility and rebuild your training foundation.",
     image: product1,
-    link: "https://your-shop-link.com/2",
+    link: "https://www.shopier.com/brkthmvmnt/44484649",
   },
   {
     id: 3,
@@ -32,7 +33,7 @@ const EBOOKS = [
     description:
       "A structured strength & mobility framework inspired by mixed movement arts.",
     image: product2,
-    link: "https://your-shop-link.com/3",
+    link: "https://www.shopier.com/brkthmvmnt/44484654",
   },
   {
     id: 4,
@@ -40,7 +41,7 @@ const EBOOKS = [
     description:
       "A structured handstand progression focused on control, alignment and awareness upside down.",
     image: product3,
-    link: "https://your-shop-link.com/3",
+    link: "https://www.shopier.com/brkthmvmnt/44484680",
   },
   {
     id: 5,
@@ -48,7 +49,15 @@ const EBOOKS = [
     description:
       "Foundational mobility framework designed to restore range, control and flow.",
     image: product4,
-    link: "https://your-shop-link.com/3",
+    link: "https://www.shopier.com/brkthmvmnt/44484678",
+  },
+  {
+    id: 6,
+    title: "Break The Movement Complete System",
+    description:
+      "Includes: Recovery Protocol, Handstand Control, Hybrid Mobility, Workout for dancers, Silent discipline.",
+    image: product5,
+    link: "https://www.shopier.com/brkthmvmnt/44484718",
   },
 ];
 
