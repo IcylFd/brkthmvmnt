@@ -240,10 +240,10 @@ export default function ProductPage() {
                     {book.type}
                   </span>
                 </div>
-
+                {/* 
                 <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light">
                   {book.description}
-                </p>
+                </p> */}
 
                 <div
                   className={`pt-3 md:pt-4 flex items-center text-[10px] sm:text-xs font-black tracking-[0.2em] uppercase transition-colors ${
