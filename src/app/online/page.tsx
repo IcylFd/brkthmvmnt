@@ -1,7 +1,7 @@
 /*
  * @Date: 2026-02-13 20:22:43
  * @LastEditors: lifangdi
- * @LastEditTime: 2026-02-21 20:27:21
+ * @LastEditTime: 2026-03-28 17:36:56
  */
 "use client"; // 声明这是客户端组件，因为我们要处理鼠标交互和提交
 
@@ -100,12 +100,10 @@ export default function Online() {
 
       <div className="relative z-10 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter text-white mb-4">
-          1:1 Movement Mentorship
+          work with me
         </h1>
         <p className="text-gray-400 text-xl font-light uppercase leading-relaxed mb-8 p-8">
-          A long-term supervision system built for structural progression.
-          <br />
-          Personalized to your level, load capacity, and schedule.
+          apply for 1:1 coaching
         </p>
 
         <form
@@ -127,7 +125,7 @@ export default function Online() {
             type="submit"
             className="px-8 py-4 bg-white text-black rounded-full font-bold hover:bg-gray-200 transition-all active:scale-95 whitespace-nowrap"
           >
-            APPLY NOW
+            SEND NOW
           </button>
         </form>
       </div>

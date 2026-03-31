@@ -1,0 +1,9 @@
+{
+  "title": "1:1 Movement Mentorship",
+  "subtitle": "A long-term supervision system built for structural progression.\nPersonalized to your level, load capacity, and schedule.",
+  "placeholder": "Enter your email",
+  "button": "APPLY NOW",
+  "success": "Application submitted successfully.",
+  "error": "Something went wrong. Please try again.",
+  "networkError": "Network error. Please try later."
+}

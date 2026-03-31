@@ -1,0 +1,11 @@
+{
+  "online": {
+    "title": "1:1 Hareket Mentorluğu",
+    "subtitle": "Yapısal ilerleme için tasarlanmış uzun vadeli bir rehberlik sistemi.\nSeviyene, yük kapasitesine ve programına göre kişiselleştirilir.",
+    "placeholder": "E-posta adresinizi girin",
+    "button": "BAŞVUR",
+    "success": "Başvurunuz başarıyla gönderildi.",
+    "error": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "networkError": "Ağ hatası. Lütfen daha sonra tekrar deneyin."
+  }
+}

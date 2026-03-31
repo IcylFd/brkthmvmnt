@@ -79,7 +79,7 @@ export default function Home() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 md:px-10">
         {/* HERO */}
-        <section className="h-screen flex flex-col justify-center">
+        <section className="h-[60vh] flex flex-col justify-center">
           <h1 className="text-[clamp(48px,12vw,140px)] font-black italic tracking-tighter leading-[0.9] uppercase">
             Break The <br />
             <span
@@ -94,7 +94,22 @@ export default function Home() {
             FLEX MIND FLOW BODY POWER SOUL
           </p>
         </section>
+        <footer className="h-[40vh] flex flex-col items-center justify-center text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold italic mb-10 uppercase tracking-widest">
+            movement library
+          </h2>
 
+          <Link
+            href="/product"
+            // target="_blank"
+            className="group relative px-10 sm:px-14 md:px-16 py-4 sm:py-5 md:py-6 border border-white overflow-hidden transition-all"
+          >
+            <span className="relative z-10 font-bold group-hover:text-black transition-colors text-sm sm:text-base md:text-lg">
+              EXPLORE MORE
+            </span>
+            <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          </Link>
+        </footer>
         {/* SECTION 1 */}
         <section className="h-[80vh] flex items-center">
           <div className="max-w-2xl border-l border-white/30 pl-6 sm:pl-8 md:pl-12">
@@ -182,21 +197,6 @@ export default function Home() {
         </section>
 
         {/* FOOTER */}
-        <footer className="h-screen flex flex-col items-center justify-center text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold italic mb-10 uppercase tracking-widest">
-            Get your guidance
-          </h2>
-
-          <Link
-            href="/product"
-            className="group relative px-10 sm:px-14 md:px-16 py-4 sm:py-5 md:py-6 border border-white overflow-hidden transition-all"
-          >
-            <span className="relative z-10 font-bold group-hover:text-black transition-colors text-sm sm:text-base md:text-lg">
-              EXPLORE MORE
-            </span>
-            <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </Link>
-        </footer>
       </div>
     </div>
   );
