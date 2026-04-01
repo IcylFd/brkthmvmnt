@@ -99,12 +99,10 @@ export default function BiographyPage() {
 
             <section className="space-y-4">
               <p>
-                This method was not built in theory. It was built through
-                practice, injury, adaptation, and long-term discipline.
-              </p>
-              <p>
-                Break The Movement is the result of studying complexity,
-                breaking it into parts, and rebuilding it sustainably.
+                &quot;&apos;Break the movement&apos; is the result of studying
+                the art of movement in daily life. To understand the flow, we
+                need to break down the parts of movement from a deeper
+                perspective.&quot;
               </p>
             </section>
           </div>
