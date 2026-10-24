@@ -8,10 +8,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const navLinks = [
-    { name: "Product", href: "/product" },
+    { name: "Movement Library", href: "/product" },
     { name: "Online", href: "/online" },
     { name: "Biography", href: "/biography" },
     { name: "Contact", href: "/contact" },
+    { name: "About", href: "/about" },
   ];
 
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
           className="relative w-full overflow-hidden rounded-lg group"
         >
           <Image
-            src="/logo.jpg"
+            src="/logo1.jpg"
             alt="Logo"
             width={200}
             height={100}
@@ -97,7 +98,7 @@ const Navbar = () => {
             className="relative w-28 h-14"
           >
             <Image
-              src="/logo.jpg"
+              src="/logo1.jpg"
               alt="Logo"
               fill
               className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
