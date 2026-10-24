@@ -103,7 +103,7 @@ export default function About() {
             href="/product"
             className="group relative flex items-center justify-center h-16 sm:h-20 border border-white overflow-hidden"
           >
-            <span className="relative z-10 text-[11px] sm:text-sm md:text-base font-bold tracking-wide whitespace-nowrap transition-colors duration-300 group-hover:text-black">
+            <span className="relative z-10 px-6 sm:px-10 text-[11px] sm:text-sm md:text-base font-bold tracking-wide whitespace-nowrap transition-colors duration-300 group-hover:text-black">
               EXPLORE MORE
             </span>
             <div
