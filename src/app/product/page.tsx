@@ -16,15 +16,23 @@ import Swipes from "@/assets/swipes.jpg";
 import Turtle from "@/assets/turtle.jpg";
 import Halo from "@/assets/halo.jpg";
 import ChairFreeze from "@/assets/chair.jpg";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 const TABS = [
   { id: "level1", levelTitle: "Level 1", title: "Movement Fundamentals" },
   { id: "level2", levelTitle: "Level 2", title: "Flow Moves, Basic Skills" },
   { id: "level3", levelTitle: "Level 3", title: "Next Level Moves" },
 ];
-
-const EBOOKS = [
+type Ebook = {
+  id: number;
+  title: string;
+  image: StaticImageData;
+  link: string;
+  type: string;
+  level: string;
+  status?: "soon" | "available";
+};
+const EBOOKS: Ebook[] = [
   {
     id: 1,
     title: "Flare",
@@ -116,7 +124,7 @@ const EBOOKS = [
     // status: "soon",
   },
   {
-    id: 11,
+    id: 12,
     title: "Turtle Freeze",
     image: Turtle,
     link: "https://www.shopier.com/brkthmvmnt/45742497",
@@ -124,7 +132,7 @@ const EBOOKS = [
     level: "level1",
   },
   {
-    id: 12,
+    id: 13,
     title: "Halo",
     image: Halo,
     link: "https://www.shopier.com/brkthmvmnt/45743776",
@@ -132,7 +140,7 @@ const EBOOKS = [
     level: "level3",
   },
   {
-    id: 13,
+    id: 14,
     title: "Chair Freeze",
     image: ChairFreeze,
     link: "https://www.shopier.com/brkthmvmnt/45743938",
@@ -199,7 +207,7 @@ export default function ProductPage() {
       {/* 卡片 */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
         {filtered.map((book) => {
-          const isComingSoon = book.status === "soon";
+          const isComingSoon = book?.status === "soon";
 
           return (
             <a
