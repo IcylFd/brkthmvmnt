@@ -132,8 +132,12 @@ export default function Home() {
               Break The Movement
             </h1>
 
-            <p className="mt-5 whitespace-nowrap text-base font-semibold uppercase tracking-[0.18em] sm:text-xl">
-              FLEX MIND • FLOW BODY • POWER SOUL
+            <p className="mt-5 text-base font-semibold uppercase tracking-[0.18em] leading-relaxed sm:whitespace-nowrap sm:text-xl">
+              <span className="block sm:inline">FLEX MIND</span>
+              <span className="hidden sm:inline"> • </span>
+              <span className="block sm:inline">FLOW BODY</span>
+              <span className="hidden sm:inline"> • </span>
+              <span className="block sm:inline">POWER SOUL</span>
             </p>
 
             <p className="mt-5 text-sm leading-relaxed text-white/75">
